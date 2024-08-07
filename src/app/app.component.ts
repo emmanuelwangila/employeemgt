@@ -4,12 +4,13 @@ import { EmployeeService } from './employee.service';
 import { Employee } from './employee';
 import { HttpErrorResponse } from '@angular/common/http';
 import { response } from 'express';
+import { CommonModule, NgFor } from '@angular/common';
 import { error } from 'console';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'], // Corrected property name
 })
