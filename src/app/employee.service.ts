@@ -28,4 +28,8 @@ export class EmployeeService {
       employee
     );
   }
+
+  public deleteEmployee(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiServerUrl}/employee/delete/{id}`);
+  }
 }
