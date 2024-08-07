@@ -1,5 +1,5 @@
 export interface Employee {
-  int: number;
+  id: number;
   name: String;
   title: String;
   email: String;
