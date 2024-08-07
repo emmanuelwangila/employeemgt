@@ -13,11 +13,15 @@ import { error } from 'console';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'], // Corrected property name
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'employeemgt';
   public employees: Employee[] = [];
 
   constructor(private employeeService: EmployeeService) {}
+
+  ngOnInit(): void {
+    this.getEmployees();
+  }
 
   public getEmployees(): void {
     this.employeeService.getEmployees().subscribe(
