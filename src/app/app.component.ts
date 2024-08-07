@@ -1,19 +1,32 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee';
+import { HttpErrorResponse } from '@angular/common/http';
+import { response } from 'express';
+import { error } from 'console';
+
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrls: ['./app.component.css'], // Corrected property name
 })
 export class AppComponent {
   title = 'employeemgt';
-
   public employees: Employee[] = [];
 
-  constructor(employeeService: EmployeeService) {}
+  constructor(private employeeService: EmployeeService) {}
+
+  public getEmployees(): void {
+    this.employeeService.getEmployees().subscribe(
+      (response: Employee[]) => {
+        this.employees = response;
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+    );
+  }
 }
