@@ -21,4 +21,11 @@ export class EmployeeService {
       employee
     );
   }
+
+  public updateEmployee(employee: Employee): Observable<Employee> {
+    return this.http.put<Employee>(
+      `${this.apiServerUrl}/employee/update{id}`,
+      employee
+    );
+  }
 }
