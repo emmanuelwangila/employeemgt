@@ -2,8 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee';
-import { HttpClientModule, HttpErrorResponse } from '@angular/common/http';
+import {
+  HttpClientModule,
+  HttpErrorResponse,
+  provideHttpClient,
+  withInterceptors,
+} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { myInterceptor } from './my-interceptor.service'; // Import the functional interceptor
 
 @Component({
   selector: 'app-root',
@@ -28,7 +34,7 @@ export class AppComponent implements OnInit {
         this.employees = response;
       },
       (error: HttpErrorResponse) => {
-        alert(error.message);
+        console.log(error.message);
       }
     );
   }
