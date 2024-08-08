@@ -28,7 +28,7 @@
       >
         Employees
       </h2>
-      <div class="overflow-x-auto">
+      <div *ngFor="let employee of employees" class="overflow-x-auto">
         <table class="min-w-full overflow-x-visible bg-white">
           <thead>
             <tr>
@@ -69,17 +69,17 @@
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
-                Emmanuel Wangila
+                {{ employee.name }}
               </td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
-                emmanuelwangila.com
+                {{ employee.email }}
               </td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
-                Software Engineer
+                {{ employee.title }}
               </td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
@@ -92,24 +92,16 @@
             <tr>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                2
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                Enock Wangila
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                enockwangila.com
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                Actuarial Scientist Engineer
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
@@ -126,19 +118,13 @@
               </td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                Edwin Simiyu
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                simiyu.comarm
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                Electrical Engineer
-              </td>
+              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
