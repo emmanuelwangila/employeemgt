@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
 import { response } from 'express';
+import { error } from 'console';
 
 @Component({
   selector: 'app-addemployee',
@@ -31,6 +32,10 @@ export class AddemployeeComponent {
       .subscribe((response: Employee) => {
         console.log(response);
         alert('Employee added succesfully');
-      });
+      }),
+      (error: Error) => {
+        console.error(error);
+        alert('Failed to add an employee');
+      };
   }
 }
