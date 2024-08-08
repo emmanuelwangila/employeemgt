@@ -18,25 +18,6 @@ import { myInterceptor } from './my-interceptor.service'; // Import the function
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'employeemgt';
-  public employees: Employee[] = [];
-
-  constructor(private employeeService: EmployeeService) {}
-
-  ngOnInit(): void {
-    this.getEmployees();
-  }
-
-  public getEmployees(): void {
-    this.employeeService.getEmployees().subscribe(
-      (response: Employee[]) => {
-        this.employees = response;
-        console.log(this.employees);
-      },
-      (error: HttpErrorResponse) => {
-        console.log(error.message);
-      }
-    );
-  }
 }
