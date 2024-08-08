@@ -28,7 +28,7 @@
       >
         Employees
       </h2>
-      <div *ngFor="let employee of employees" class="overflow-x-auto">
+      <div class="overflow-x-auto">
         <table class="min-w-full overflow-x-visible bg-white">
           <thead>
             <tr>
@@ -60,11 +60,13 @@
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
+            <!-- Loop over the employees array -->
+            <!-- Loop for the Table in the table row too load Dynamic Dataa.. -->
+            <tr *ngFor="let employee of employees">
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
-                1
+                {{ employee.id }}
               </td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
@@ -81,50 +83,6 @@
               >
                 {{ employee.title }}
               </td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                <button class="text-red-600 hover:text-red-800">
-                  <i class="fas fa-trash-alt"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                <button class="text-red-600 hover:text-red-800">
-                  <i class="fas fa-trash-alt"></i>
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              >
-                3
-              </td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
-              <td
-                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
-              ></td>
               <td
                 class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
               >
