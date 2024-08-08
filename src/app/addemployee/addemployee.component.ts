@@ -22,4 +22,15 @@ export class AddemployeeComponent {
     employeeCode: '',
     imageUrl: '',
   };
+
+  constructor(private employeeService: EmployeeService) {}
+
+  public addEmployee(): void {
+    this.employeeService
+      .addEmployees(this.employee)
+      .subscribe((response: Employee) => {
+        console.log(response);
+        alert('Employee added succesfully');
+      });
+  }
 }
