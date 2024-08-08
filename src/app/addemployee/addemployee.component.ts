@@ -41,7 +41,7 @@ export class AddemployeeComponent {
           employeeCode: '',
           imageUrl: '',
         }),
-          (error: String) => {
+          (error: any) => {
             console.error('Error adding employee', error);
           };
       });
