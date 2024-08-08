@@ -1,1 +1,62 @@
-<p>addemployee works!</p>
+<div>
+  <h2>{{ title }}</h2>
+  <form (ngSubmit)="addEmployee()" #employeeForm="ngForm">
+    <div>
+      <label for="name">Name:</label>
+      <input
+        id="name"
+        type="text"
+        [(ngModel)]="employee.name"
+        name="name"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="email">Email:</label>
+      <input
+        id="email"
+        type="email"
+        [(ngModel)]="employee.email"
+        name="email"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="title">Title:</label>
+      <input
+        id="title"
+        type="text"
+        [(ngModel)]="employee.title"
+        name="title"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="phone">Phone:</label>
+      <input
+        id="phone"
+        type="text"
+        [(ngModel)]="employee.phone"
+        name="phone"
+        required
+      />
+    </div>
+
+    <div>
+      <label for="imageUrl">Image URL:</label>
+      <input
+        id="imageUrl"
+        type="text"
+        [(ngModel)]="employee.imageUrl"
+        name="imageUrl"
+      />
+    </div>
+
+    <button type="submit" [disabled]="!employeeForm.form.valid">
+      Add Employee
+    </button>
+  </form>
+</div>

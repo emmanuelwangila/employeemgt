@@ -3,11 +3,12 @@ import { EmployeeService } from '../employee.service';
 import { Employee } from '../employee';
 import { response } from 'express';
 import { error } from 'console';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-addemployee',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './addemployee.component.html',
   styleUrl: './addemployee.component.css',
 })
