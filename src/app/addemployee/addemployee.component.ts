@@ -11,4 +11,8 @@ import { Employee } from '../employee';
 })
 export class AddemployeeComponent {
   title = 'add-employee ';
+
+  public employee: Employee[] = [];
+
+  constructor(private employeeService: EmployeeService) {}
 }
