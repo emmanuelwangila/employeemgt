@@ -3,54 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee system</title>
+    <title>Employee System</title>
   </head>
-  <nav class="bg-blue-500 flex m-2 rounded-full">
-    <ul class="flex w-full justify-evenly m-2 cursor-pointer">
-      <li class="text-white m-1">Home</li>
-      <li class="text-white m-1">About</li>
-      <li class="text-white m-1">Add Employees</li>
-    </ul>
-  </nav>
 
-  <body>
-    <div class="bg-slate-200 h-screen m-2 p-3 flex flex-col shadow-md">
-      <h1 class="text-teal-600 flex-row font-sans rounded-md">
-        Employee Management System
-      </h1>
-      <div class="flex">
-        <div class="border border-1 border-gary-400">
-          <table class="w-full h-full m-5 p-5 justify-between">
-            <thead class="justify-between m-4 p-4">
-              <tr class="flex m-3 p-3 justify-between">
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Title</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Emmanuel Wangila</td>
-                <td>emmanuelwangila1gmail.com</td>
-                <td>Software Engineer</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Enock Wangila</td>
-                <td>enockwangila.com</td>
-                <td>Acturial Scientist Engineer</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Edwin Simiyu</td>
-                <td>simiyu.comarm</td>
-                <td>Electrical Engineer</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+  <body class="bg-slate-200 h-screen p-4">
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-500 flex m-2 rounded-full">
+      <ul class="flex w-full justify-evenly m-2 cursor-pointer">
+        <li class="text-white m-1">Home</li>
+        <li class="text-white m-1">About</li>
+        <li class="text-white m-1">Add Employees</li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h1 class="text-teal-600 text-2xl mb-6">Employee Management System</h1>
+      <h2
+        class="text-yellow-500 w-[10%] rounded-md border border-blue-500 border-1 m-3 font-semibold font-sans"
+      >
+        Employees
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white">
+          <thead>
+            <tr>
+              <th
+                class="px-6 py-3 border-b-2 border-gray-300 bg-gray-100 text-left text-xs leading-4 font-medium text-blue-500 uppercase tracking-wider"
+              >
+                ID
+              </th>
+              <th
+                class="px-6 py-3 border-b-2 border-gray-300 bg-gray-100 text-left text-xs leading-4 font-medium text-blue-500 uppercase tracking-wider"
+              >
+                Name
+              </th>
+              <th
+                class="px-6 py-3 border-b-2 border-gray-300 bg-gray-100 text-left text-xs leading-4 font-medium text-blue-500 uppercase tracking-wider"
+              >
+                Email
+              </th>
+              <th
+                class="px-6 py-3 border-b-2 border-gray-300 bg-gray-100 text-left text-xs leading-4 font-medium text-blue-500 uppercase tracking-wider"
+              >
+                Title
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <tr>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                1
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                Emmanuel Wangila
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                emmanuelwangila.com
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                Software Engineer
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                2
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                Enock Wangila
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                enockwangila.com
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                Actuarial Scientist Engineer
+              </td>
+            </tr>
+            <tr>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                3
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                Edwin Simiyu
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                simiyu.comarm
+              </td>
+              <td
+                class="px-6 py-4 whitespace-no-wrap text-sm leading-5 text-gray-700"
+              >
+                Electrical Engineer
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>
