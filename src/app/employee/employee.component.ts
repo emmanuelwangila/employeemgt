@@ -40,7 +40,7 @@ export class EmployeeComponent implements OnInit {
         alert('Employee deleted succesfully');
 
         this.employees = this.employees.filter(
-          (employee) => employee.id === employeeId
+          (employee) => employee.id !== employeeId
         );
       },
 
