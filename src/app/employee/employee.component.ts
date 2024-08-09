@@ -31,4 +31,17 @@ export class EmployeeComponent implements OnInit {
       }
     );
   }
+
+  public deleteEmployee(employeeId: number): void {
+    this.employeeService
+      .deleteEmployee(employeeId)
+      .subscribe((response: void) => {
+        console.log('Employee deleted succesfully', response);
+        alert('Employee deleted succesfully');
+
+        this.employees = this.employees.filter(
+          (employee) => employee.id === employeeId
+        );
+      });
+  }
 }
