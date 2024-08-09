@@ -4,6 +4,7 @@ import { EmployeeService } from '../employee.service';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { error } from 'console';
+import { response } from 'express';
 
 @Component({
   selector: 'app-employee',
@@ -48,5 +49,12 @@ export class EmployeeComponent implements OnInit {
         console.error('Error deleting employee', error);
       }
     );
+  }
+
+  public updateEmployee(employee: Employee): void {
+    this.employeeService.updateEmployee(employee).subscribe((response: any) => {
+      console.log('Employee updated succesfully', response);
+      alert('Employee has been upadted succesfully');
+    });
   }
 }
