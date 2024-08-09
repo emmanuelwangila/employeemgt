@@ -16,6 +16,8 @@ import { response } from 'express';
 export class EmployeeComponent implements OnInit {
   public employees: Employee[] = [];
 
+  public selectedEmployee: Employee | null = null;
+
   constructor(private employeeService: EmployeeService) {}
 
   ngOnInit(): void {
@@ -56,5 +58,9 @@ export class EmployeeComponent implements OnInit {
       console.log('Employee updated succesfully', response);
       alert('Employee has been upadted succesfully');
     });
+  }
+
+  public selectEmployee(employee: Employee): void {
+    this.selectedEmployee = { ...employee };
   }
 }
