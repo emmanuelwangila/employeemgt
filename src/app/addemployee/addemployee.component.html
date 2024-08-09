@@ -4,21 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Employee</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="bg-gray-100">
     <div
-      class="w-full flex flex-col justify-center h-fit bg-slate-200 rounded-md m-3 p-4"
+      class="w-full max-w-md mx-auto flex flex-col justify-center h-fit bg-slate-200 rounded-md m-6 p-6 shadow-lg"
     >
-      <h2 class="text-teal-600 font-sans font-bold">{{ title }}</h2>
+      <h2 class="text-teal-600 font-sans font-bold text-2xl mb-4">
+        {{ title }}
+      </h2>
       <form
-        class="bg-white rounded-md max-w-96"
+        class="bg-white rounded-md shadow p-6"
         (ngSubmit)="addEmployee()"
         #employeeForm="ngForm"
       >
-        <div class="flex m-5 p-5 flex-col text-blue-500">
-          <label class="m-2 p-3" for="name">Name:</label>
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 text-blue-500 font-semibold" for="name"
+            >Name:</label
+          >
           <input
-            class="bg-gray-300 border border-blue-200 rounded-md w-[50%]"
+            class="bg-gray-300 border border-blue-200 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
             id="name"
             type="text"
             [(ngModel)]="employee.name"
@@ -27,9 +35,12 @@
           />
         </div>
 
-        <div>
-          <label for="email">Email:</label>
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 text-blue-500 font-semibold" for="email"
+            >Email:</label
+          >
           <input
+            class="bg-gray-300 border border-blue-200 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
             id="email"
             type="email"
             [(ngModel)]="employee.email"
@@ -38,9 +49,12 @@
           />
         </div>
 
-        <div>
-          <label for="title">Title:</label>
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 text-blue-500 font-semibold" for="title"
+            >Title:</label
+          >
           <input
+            class="bg-gray-300 border border-blue-200 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
             id="title"
             type="text"
             [(ngModel)]="employee.title"
@@ -49,9 +63,12 @@
           />
         </div>
 
-        <div>
-          <label for="phone">Phone:</label>
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 text-blue-500 font-semibold" for="phone"
+            >Phone:</label
+          >
           <input
+            class="bg-gray-300 border border-blue-200 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
             id="phone"
             type="text"
             [(ngModel)]="employee.phone"
@@ -60,9 +77,12 @@
           />
         </div>
 
-        <div>
-          <label for="imageUrl">Image URL:</label>
+        <div class="flex flex-col mb-4">
+          <label class="mb-2 text-blue-500 font-semibold" for="imageUrl"
+            >Image URL:</label
+          >
           <input
+            class="bg-gray-300 border border-blue-200 rounded-md p-2 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
             id="imageUrl"
             type="text"
             [(ngModel)]="employee.imageUrl"
@@ -70,7 +90,11 @@
           />
         </div>
 
-        <button type="submit" [disabled]="!employeeForm.form.valid">
+        <button
+          type="submit"
+          [disabled]="!employeeForm.form.valid"
+          class="bg-teal-600 text-white rounded-md p-3 w-full hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 disabled:bg-teal-300"
+        >
           Add Employee
         </button>
       </form>
