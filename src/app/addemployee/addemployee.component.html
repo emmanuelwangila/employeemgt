@@ -4,83 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Employee</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-
-      .form-container {
-        background-color: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        max-width: 400px;
-        width: 100%;
-      }
-
-      h2 {
-        text-align: center;
-        color: #333;
-        margin-bottom: 1.5rem;
-      }
-
-      label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        color: #555;
-      }
-
-      input {
-        width: calc(100% - 20px);
-        padding: 10px;
-        margin-bottom: 1rem;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-        font-size: 16px;
-      }
-
-      input:focus {
-        border-color: #007bff;
-        outline: none;
-      }
-
-      button {
-        width: 100%;
-        padding: 12px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-
-      button:hover {
-        background-color: #0056b3;
-      }
-
-      button:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-      }
-    </style>
   </head>
   <body>
-    <div class="form-container">
-      <h2>{{ title }}</h2>
-      <form (ngSubmit)="addEmployee()" #employeeForm="ngForm">
-        <div>
-          <label for="name">Name:</label>
+    <div
+      class="w-full flex flex-col justify-center h-fit bg-slate-200 rounded-md m-3 p-4"
+    >
+      <h2 class="text-teal-600 font-sans font-bold">{{ title }}</h2>
+      <form
+        class="bg-white rounded-md max-w-96"
+        (ngSubmit)="addEmployee()"
+        #employeeForm="ngForm"
+      >
+        <div class="flex m-5 p-5 flex-col text-blue-500">
+          <label class="m-2 p-3" for="name">Name:</label>
           <input
+            class="bg-gray-300 border border-blue-200 rounded-md w-[50%]"
             id="name"
             type="text"
             [(ngModel)]="employee.name"
