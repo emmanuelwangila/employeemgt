@@ -4,15 +4,19 @@
   <nav class="bg-blue-500 flex m-2 rounded-full">
     <ul class="flex w-full justify-center gap-5 m-2 cursor-pointer">
       <li class="text-white m-1">
-        <a routerLinkTo="/"></a>
+        <a routerLink="/" routerLinkACtive="active" aria-current="page"></a>
         Home
       </li>
       <li class="text-white m-1">
-        <a routerLink="/about"> </a>
-        About
+        <a routerLink="/about" routerLinkActive="active"> About </a>
       </li>
       <li class="text-white m-1">
-        <a routerLinkTo="/add-employee">Add Employees</a>
+        <a
+          routerLink="/add-employee"
+          routerLinkActive="active"
+          aria-current="page"
+          >Add Employees</a
+        >
       </li>
     </ul>
   </nav>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee';
 import {
@@ -16,6 +16,7 @@ import { myInterceptor } from './my-interceptor.service'; // Import the function
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterLink,
     RouterLinkActive,
     RouterOutlet,
     CommonModule,
