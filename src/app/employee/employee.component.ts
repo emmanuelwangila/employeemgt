@@ -53,14 +53,18 @@ export class EmployeeComponent implements OnInit {
     );
   }
 
-  public updateEmployee(employee: Employee): void {
-    this.employeeService.updateEmployee(employee).subscribe((response: any) => {
-      console.log('Employee updated succesfully', response);
-      alert('Employee has been upadted succesfully');
-    });
-  }
-
   public selectEmployee(employee: Employee): void {
     this.selectedEmployee = { ...employee };
+  }
+
+  public updateEmployee(employee: Employee): void {
+    if (this.selectedEmployee) {
+      this.employeeService
+        .updateEmployee(employee)
+        .subscribe((response: Employee) => {
+          console.log('Employee has been updated succesfully', response);
+          alert('Employee has been upadted succesfully');
+        });
+    }
   }
 }
