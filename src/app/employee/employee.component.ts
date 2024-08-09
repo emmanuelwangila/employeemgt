@@ -3,6 +3,7 @@ import { Employee } from '../employee';
 import { EmployeeService } from '../employee.service';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { error } from 'console';
 
 @Component({
   selector: 'app-employee',
@@ -33,15 +34,19 @@ export class EmployeeComponent implements OnInit {
   }
 
   public deleteEmployee(employeeId: number): void {
-    this.employeeService
-      .deleteEmployee(employeeId)
-      .subscribe((response: void) => {
+    this.employeeService.deleteEmployee(employeeId).subscribe(
+      (response: void) => {
         console.log('Employee deleted succesfully', response);
         alert('Employee deleted succesfully');
 
         this.employees = this.employees.filter(
           (employee) => employee.id === employeeId
         );
-      });
+      },
+
+      (error: any) => {
+        console.error('Error deleting employee', error);
+      }
+    );
   }
 }
