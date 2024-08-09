@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLinkActive, RouterOutlet } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { Employee } from './employee';
 import {
@@ -14,7 +14,13 @@ import { myInterceptor } from './my-interceptor.service'; // Import the function
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, HttpClientModule],
+  imports: [
+    RouterOutlet,
+    RouterLinkActive,
+    RouterOutlet,
+    CommonModule,
+    HttpClientModule,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
